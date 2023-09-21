@@ -4,12 +4,12 @@ import plotly.express as px
 from dash import Dash, Input, Output, callback, dcc, html
 
 from api import get_all_materials
-from src.process_data import process_data
+from process_data import process_data
 
 app = dash.register_page(__name__, path='/graficos')
 materials = get_all_materials()
 
-df  = pd.read_excel('data/pharmawatch.xlsx')
+df  = pd.read_excel('src/data/pharmawatch.xlsx')
 
 def layout(material=materials[0]):
     return html.Div([
