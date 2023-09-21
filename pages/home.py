@@ -1,5 +1,3 @@
-import os
-
 import dash
 import pandas as pd
 from dash import dcc, html
@@ -10,7 +8,7 @@ from process_data import calc_demand, calc_slope
 app = dash.register_page(__name__, path='/')
 
 materials = get_all_materials()
-df  = pd.read_excel(os.path.join(os.getcwd() , 'data/pharmawatch.xlsx'))
+df  = pd.read_excel('data/pharmawatch.xlsx')
 
 df_tendency = pd.DataFrame(columns=['Material', 'Tendência', 'Demanda'])
 for material in materials:
