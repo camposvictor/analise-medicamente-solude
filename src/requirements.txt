@@ -2,8 +2,6 @@ ansi2html==1.8.0
 argcomplete==2.0.0
 Beaker==1.10.0
 beautifulsoup4==4.11.2
-blivet==3.4.4
-blivet-gui==2.3.0
 Brlapi==0.8.4
 CacheControl==0.12.10
 cachy==0.3.0
