@@ -1,0 +1,11 @@
+.dropdown {
+    color: var(--text-secondary);
+}
+
+.dropdown .Select-value {
+    color: var(--text);
+}
+
+.dropdown > .Select-control {
+    border: 1px solid var(--border)
+}
