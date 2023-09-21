@@ -11,7 +11,7 @@ from process_data import process_data
 app = dash.register_page(__name__, path='/graficos')
 materials = get_all_materials()
 
-df  = pd.read_excel(os.path.join(os.getcwd(), 'src/data/pharmawatch.xlsx'))
+df  = pd.read_excel(os.path.join(os.getcwd(), 'data/pharmawatch.xlsx'))
 
 def layout(material=materials[0]):
     return html.Div([
