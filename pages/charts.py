@@ -3,11 +3,10 @@ import pandas as pd
 import plotly.express as px
 from dash import Dash, Input, Output, callback, dcc, html
 
-from api import get_all_materials
 from process_data import process_data
 
 app = dash.register_page(__name__, path='/graficos')
-materials = get_all_materials()
+materials = pd.read_csv('data/materials.csv')['Material']
 
 df  = pd.read_excel('data/pharmawatch.xlsx')
 
