@@ -36,9 +36,9 @@ def process_data(df):
         q75_list.append(q75)
 
     # Append the quantiles to the original DataFrame
-    grouped_data['Q25'] = q25_list
-    grouped_data['Q50'] = q50_list
-    grouped_data['Q75'] = q75_list
+    grouped_data['Q1'] = q25_list
+    grouped_data['Q2'] = q50_list
+    grouped_data['Q3'] = q75_list
 
     return {'data': grouped_data, 'quantile_25': quantile_25, 'quantile_50': quantile_50, 'quantile_75': quantile_75}
 
