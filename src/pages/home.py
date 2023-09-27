@@ -8,8 +8,8 @@ from process_data import calc_demand, calc_slope
 
 app = dash.register_page(__name__, path='/')
 
-df  = pd.read_excel(os.path.abspath('src/data/pharmawatch.xlsx'))
-materials = pd.read_csv(os.path.abspath('src/data/materials.csv'))['Material']
+df  = pd.read_excel(os.path.abspath('data/pharmawatch.xlsx'))
+materials = pd.read_csv(os.path.abspath('data/materials.csv'))['Material']
 
 df_tendency = pd.DataFrame(columns=['Material', 'Tendência', 'Demanda'])
 for material in materials:
