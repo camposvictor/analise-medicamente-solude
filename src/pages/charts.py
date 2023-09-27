@@ -6,9 +6,9 @@ from dash import Dash, Input, Output, callback, dcc, html
 from process_data import process_data
 
 app = dash.register_page(__name__, path='/graficos')
-materials = pd.read_csv('data/materials.csv')['Material']
+materials = pd.read_csv('src/data/materials.csv')['Material']
 
-df  = pd.read_excel('data/pharmawatch.xlsx')
+df  = pd.read_excel('src/data/pharmawatch.xlsx')
 
 def layout(material=materials[0]):
     return html.Div([
